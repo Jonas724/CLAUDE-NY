@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-builder-bg text-builder-text;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-builder-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-builder-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-builder-textMuted;
+  }
+}
+
+@layer components {
+  .builder-input {
+    @apply w-full bg-builder-bg border border-builder-border rounded-md px-3 py-2 text-sm text-builder-text
+           focus:outline-none focus:border-builder-accent focus:ring-1 focus:ring-builder-accent
+           placeholder:text-builder-textMuted;
+  }
+
+  .builder-label {
+    @apply block text-xs font-medium text-builder-textMuted mb-1;
+  }
+
+  .builder-btn {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150;
+  }
+
+  .builder-btn-primary {
+    @apply builder-btn bg-builder-accent text-white hover:bg-builder-accentHover;
+  }
+
+  .builder-btn-secondary {
+    @apply builder-btn bg-builder-border text-builder-text hover:bg-builder-canvas;
+  }
+
+  .builder-btn-danger {
+    @apply builder-btn bg-builder-danger text-white hover:bg-red-600;
+  }
+
+  .canvas-component {
+    @apply relative cursor-pointer transition-all duration-150;
+  }
+
+  .canvas-component:hover {
+    @apply ring-2 ring-builder-accent/40;
+  }
+
+  .canvas-component.selected {
+    @apply ring-2 ring-builder-accent;
+  }
+
+  .drag-overlay {
+    @apply opacity-80 shadow-2xl;
+  }
+}

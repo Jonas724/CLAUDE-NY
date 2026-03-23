@@ -83,8 +83,11 @@ export default function DashboardPage() {
 
   if (!loaded) {
     return (
-      <div className="min-h-screen bg-builder-bg flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-2 border-builder-accent border-t-transparent rounded-full" />
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0f1117" }}>
+        <div className="text-center">
+          <div className="animate-spin w-8 h-8 border-2 border-t-transparent rounded-full mx-auto mb-4" style={{ borderColor: "#6366f1", borderTopColor: "transparent" }} />
+          <p style={{ color: "#94a3b8", fontSize: "14px" }}>Laddar AppByggare...</p>
+        </div>
       </div>
     );
   }

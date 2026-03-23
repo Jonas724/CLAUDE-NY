@@ -17,8 +17,9 @@ import {
 } from "lucide-react";
 import { ComponentType } from "@/lib/types";
 import { componentTypes, getComponentLabel } from "@/lib/defaultComponents";
+import type { LucideProps } from "lucide-react";
 
-const iconMap: Record<string, React.FC<{ size?: number; className?: string }>> = {
+const iconMap: Record<string, React.FC<LucideProps>> = {
   Sparkles,
   Type,
   Image,

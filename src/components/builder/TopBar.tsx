@@ -3,9 +3,10 @@
 import React, { useState, useCallback } from "react";
 import { Save, Eye, Download, ArrowLeft, Check } from "lucide-react";
 import { useBuilder } from "@/lib/store";
+import { Project, BuilderComponent } from "@/lib/types";
 import Button from "@/components/ui/Button";
 
-function generateHTML(project: { name: string; components: Array<{ type: string; content: string; styles: Record<string, string | undefined>; props: Record<string, string> }> }): string {
+function generateHTML(project: Project): string {
   const stylesToCSS = (styles: Record<string, string | undefined>): string => {
     return Object.entries(styles)
       .filter(([, v]) => v !== undefined && v !== "")
@@ -16,8 +17,8 @@ function generateHTML(project: { name: string; components: Array<{ type: string;
       .join("; ");
   };
 
-  const renderComponent = (comp: { type: string; content: string; styles: Record<string, string | undefined>; props: Record<string, string> }): string => {
-    const style = stylesToCSS(comp.styles);
+  const renderComponent = (comp: BuilderComponent): string => {
+    const style = stylesToCSS(comp.styles as unknown as Record<string, string | undefined>);
     switch (comp.type) {
       case "hero":
         return `<section style="${style}">

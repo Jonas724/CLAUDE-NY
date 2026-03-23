@@ -195,22 +195,6 @@ export default function PropertyEditor() {
                 placeholder="Underrubrik..."
               />
             )}
-            {component.type === "image" && (
-              <>
-                <PropertyField
-                  label="Bildkalla (URL)"
-                  value={component.props.src || ""}
-                  onChange={(v) => updateProp("src", v)}
-                  placeholder="https://..."
-                />
-                <PropertyField
-                  label="Alt-text"
-                  value={component.props.alt || ""}
-                  onChange={(v) => updateProp("alt", v)}
-                  placeholder="Beskrivning av bilden"
-                />
-              </>
-            )}
             {component.type === "button" && (
               <PropertyField
                 label="Lank (URL)"

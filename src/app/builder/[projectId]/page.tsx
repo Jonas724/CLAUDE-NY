@@ -136,11 +136,10 @@ function BuilderContent({ projectId }: { projectId: string }) {
   );
 }
 
-export default function BuilderPage({ params }: { params: Promise<{ projectId: string }> }) {
-  const resolvedParams = React.use(params);
+export default function BuilderPage({ params }: { params: { projectId: string } }) {
   return (
     <BuilderProvider>
-      <BuilderContent projectId={resolvedParams.projectId} />
+      <BuilderContent projectId={params.projectId} />
     </BuilderProvider>
   );
 }

@@ -6,8 +6,7 @@ import PreviewRenderer from "@/components/builder/PreviewRenderer";
 
 const STORAGE_KEY = "claude-ny-projects";
 
-export default function PreviewPage({ params }: { params: Promise<{ projectId: string }> }) {
-  const resolvedParams = React.use(params);
+export default function PreviewPage({ params }: { params: { projectId: string } }) {
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -16,7 +15,7 @@ export default function PreviewPage({ params }: { params: Promise<{ projectId: s
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         const projects: Project[] = JSON.parse(stored);
-        const found = projects.find((p) => p.id === resolvedParams.projectId);
+        const found = projects.find((p) => p.id === params.projectId);
         if (found) {
           setProject(found);
         }
@@ -26,7 +25,7 @@ export default function PreviewPage({ params }: { params: Promise<{ projectId: s
     } finally {
       setLoading(false);
     }
-  }, [resolvedParams.projectId]);
+  }, [params.projectId]);
 
   if (loading) {
     return (

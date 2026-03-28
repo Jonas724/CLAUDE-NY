@@ -4,7 +4,7 @@ import React, { useState, useCallback } from "react";
 import { Save, Eye, Download, ArrowLeft, Check } from "lucide-react";
 import { useBuilder } from "@/lib/store";
 import { Project, BuilderComponent } from "@/lib/types";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 function generateHTML(project: Project): string {
   const stylesToCSS = (styles: Record<string, string | undefined>): string => {
@@ -179,7 +179,7 @@ export default function TopBar() {
           <Eye size={16} />
           <span className="hidden sm:inline">Forhandsgranska</span>
         </Button>
-        <Button variant="primary" size="sm" onClick={handleExport}>
+        <Button variant="default" size="sm" onClick={handleExport}>
           <Download size={16} />
           <span className="hidden sm:inline">Exportera</span>
         </Button>

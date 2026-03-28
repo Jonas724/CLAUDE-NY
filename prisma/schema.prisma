@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  role         UserRole   @default(USER)
+  companyId    String?
+  company      Company?   @relation(fields: [companyId], references: [id])
+  auditLogs    AuditLog[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Company {
+  id               String           @id @default(cuid())
+  name             String
+  orgNumber        String?
+  vatType          VatType          @default(STANDARD)
+  accountingMethod AccountingMethod @default(ACCRUAL)
+  baseCurrency     String           @default("SEK")
+  users            User[]
+  documents        Document[]
+  transactions     Transaction[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+}
+
+model Document {
+  id               String         @id @default(cuid())
+  companyId        String
+  company          Company        @relation(fields: [companyId], references: [id])
+  fileUrl          String
+  fileType         String
+  originalFileName String
+  status           DocumentStatus @default(UPLOADED)
+  ocrText          String?
+  extractedJson    Json?
+  transaction      Transaction?
+  uploadedAt       DateTime       @default(now())
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model Transaction {
+  id                 String            @id @default(cuid())
+  companyId          String
+  company            Company           @relation(fields: [companyId], references: [id])
+  documentId         String?           @unique
+  document           Document?         @relation(fields: [documentId], references: [id])
+  date               DateTime?
+  supplierName       String?
+  description        String?
+  grossAmount        Float?
+  netAmount          Float?
+  vatAmount          Float?
+  currency           String            @default("SEK")
+  suggestedAccount   String?
+  finalAccount       String?
+  category           String?
+  status             TransactionStatus @default(DRAFT)
+  confidenceScore    Float?
+  aiReasoningSummary String?
+  auditLogs          AuditLog[]
+  createdAt          DateTime          @default(now())
+  updatedAt          DateTime          @updatedAt
+}
+
+model AuditLog {
+  id            String       @id @default(cuid())
+  userId        String
+  user          User         @relation(fields: [userId], references: [id])
+  transactionId String?
+  transaction   Transaction? @relation(fields: [transactionId], references: [id])
+  action        String
+  oldValue      Json?
+  newValue      Json?
+  createdAt     DateTime     @default(now())
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum VatType {
+  STANDARD
+  REDUCED
+  EXEMPT
+}
+
+enum AccountingMethod {
+  ACCRUAL
+  CASH
+}
+
+enum DocumentStatus {
+  UPLOADED
+  PROCESSING
+  REVIEWED
+  FAILED
+}
+
+enum TransactionStatus {
+  DRAFT
+  AI_SUGGESTED
+  APPROVED
+  EDITED
+  REJECTED
+}

@@ -2,73 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --primary: 246 83% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 246 83% 60%;
+    --radius: 0.75rem;
+  }
+
   * {
     box-sizing: border-box;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-builder-bg text-builder-text;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-builder-bg;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-builder-border rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-builder-textMuted;
-  }
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
 }
 
-@layer components {
-  .builder-input {
-    @apply w-full bg-builder-bg border border-builder-border rounded-md px-3 py-2 text-sm text-builder-text
-           focus:outline-none focus:border-builder-accent focus:ring-1 focus:ring-builder-accent
-           placeholder:text-builder-textMuted;
-  }
+/* Builder app scrollbar (preserved) */
+.builder-app ::-webkit-scrollbar-track { background: #0f1117; }
+.builder-app ::-webkit-scrollbar-thumb { background: #2e3140; }
 
-  .builder-label {
-    @apply block text-xs font-medium text-builder-textMuted mb-1;
-  }
-
-  .builder-btn {
-    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150;
-  }
-
-  .builder-btn-primary {
-    @apply builder-btn bg-builder-accent text-white hover:bg-builder-accentHover;
-  }
-
-  .builder-btn-secondary {
-    @apply builder-btn bg-builder-border text-builder-text hover:bg-builder-canvas;
-  }
-
-  .builder-btn-danger {
-    @apply builder-btn bg-builder-danger text-white hover:bg-red-600;
-  }
-
-  .canvas-component {
-    @apply relative cursor-pointer transition-all duration-150;
-  }
-
-  .canvas-component:hover {
-    @apply ring-2 ring-builder-accent/40;
-  }
-
-  .canvas-component.selected {
-    @apply ring-2 ring-builder-accent;
-  }
-
-  .drag-overlay {
-    @apply opacity-80 shadow-2xl;
-  }
+@layer utilities {
+  .text-balance { text-wrap: balance; }
 }

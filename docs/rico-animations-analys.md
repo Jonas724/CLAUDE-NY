@@ -49,6 +49,8 @@ Rico Animations kör i praktiken **en enda repeterbar mall**, om och om igen:
 ### Steg 1 — Positionering (kopiera systemet, inte innehållet)
 Välj en egen signaturkaraktär och visuell stil som skiljer sig från Ricos röda stick-figur (annan färg/form/personlighet). Karaktären ÄR varumärket. Allt annat i systemet kan återanvändas rakt av.
 
+**Språk: allt innehåll ska vara på ENGELSKA.** Titlar, text i videon, ljud/röster, hashtags och beskrivningar — allt på engelska för att nå den internationella publiken. Det är så Rico (från Uganda) nådde 13M prenumeranter: den globala engelskspråkiga meme-publiken är hundratals gånger större än den svenska. En fördel med formatet är att humorn mest är visuell + ljudeffekter, så det kräver nästan inget talat språk alls — men allt som ändå är text/tal ska vara engelska.
+
 ### Steg 2 — Trendjakt (daglig rutin, ~30 min)
 - Bevaka TikTok Creative Center, YouTube Trending, meme-subreddits (r/memes, r/whenthe), och konkurrentkanaler (Rico, GoodTimesWithScar-kloner, brainrot-animatörer).
 - Regel: animera bara memes som är **max 1–2 veckor gamla** och redan har bevisad spridning.
@@ -62,7 +64,7 @@ Välj en egen signaturkaraktär och visuell stil som skiljer sig från Ricos rö
 ### Steg 4 — Publicering
 - **Frekvens**: minst 3/vecka på fasta dagar (ti/fre/sö fungerar bevisat), helst 5–7/vecka i uppbyggnadsfasen.
 - **Multiposting**: samma fil till YouTube Shorts, TikTok, Instagram Reels, Snapchat Spotlight samma dag.
-- **Titelmall**: `[Meme-namn/fras] + emoji + #shorts #memes`.
+- **Titelmall**: `[Meme-namn/fras på engelska] + emoji + #shorts #memes` — alltid engelska titlar och hashtags.
 
 ### Steg 5 — Skalning och intäkter
 - Vid ~50–100 shorts: börja klippa **kompilationer i långformat** (8–12 min) av bästa shorts → högre RPM.

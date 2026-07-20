@@ -5,6 +5,20 @@
 > redan kopplade till Claude (vidIQ, Higgsfield, Magnific, Canva) — de kan
 > köras direkt härifrån.
 
+## ⚠️ Språkbeslut: ENGELSKA
+
+Alla videor produceras på **engelska** för maximal internationell räckvidd.
+Konsekvenser för planen:
+
+- **Störst marknad, hårdast konkurrens**: på engelska konkurrerar vi direkt
+  med CoComelon, Little Baby Bum, Super Simple Songs m.fl. Därför är
+  differentieringen (unik karaktär + egen vinkel) ännu viktigare än formeln.
+- **Titlar, texter, thumbnails, kanalnamn**: allt på engelska från dag 1.
+- **Publiceringstid**: optimeras mot USA (största engelskspråkiga marknaden),
+  inte Sverige.
+- **Skalning**: dubbning går ÅT ANDRA HÅLLET — från engelska till spanska,
+  portugisiska, hindi (de största barnmarknaderna efter engelska).
+
 ---
 
 ## Verktygsstacken i ett ögonkast
@@ -29,12 +43,16 @@ Total extra kostnad utöver det du redan har: **~15–30 USD/mån.**
 
 **Verktyg: ⭐ vidIQ**
 
-1. `Keyword research` på svenska barnvise-termer: "barnsånger", "imse vimse spindel",
-   "vaggvisor", "bä bä vita lamm" → hitta hög sökvolym + låg konkurrens.
-2. `Channel search` efter svenska/nordiska barnkanaler → kartlägg konkurrensen
-   (finns det en "svensk CoComelon" redan? Hur stora är de?).
-3. `Outliers` i barnnischen → se vilka format som överpresterar just nu.
-4. Beslut: nisch, målspråk, 10 första låtarna (public domain), kanalnamn.
+1. `Keyword research` på engelska barnvise-termer: "nursery rhymes", "kids songs",
+   "baby songs", "wheels on the bus", "abc song", "bedtime songs for babies"
+   → hitta hög sökvolym + luckor där konkurrensen är svagare.
+2. `Channel search` + `Outliers` i den engelska barnnischen → hitta
+   **underservade teman** (t.ex. specifika djur, fordon, känslor, rutiner)
+   där CoComelon/Little Baby Bum inte dominerar sökresultaten.
+3. `Breakout channels` i kids-nischen → studera små engelska kanaler som växer
+   snabbt just nu — deras vinklar visar var det finns utrymme.
+4. Beslut: nisch/vinkel, 10 första låtarna (public domain, engelska), kanalnamn
+   (engelskt, lätt att uttala för barn, .com-domän ledig).
 
 **Leverabel:** lista med 10 låtar rankade på sökvolym + 5 egna "beteendelåt"-idéer.
 
@@ -66,10 +84,12 @@ Total extra kostnad utöver det du redan har: **~15–30 USD/mån.**
    - Public domain-visor: nyinspelning med egen text-twist är säkrast
      (melodin är fri, men kopiera INTE någon annans inspelning/arrangemang rakt av).
    - Egna beteendelåtar: prompt-mall: "happy children's song, 95 BPM, simple
-     repetitive chorus, glockenspiel + ukulele, toddler choir, Swedish lyrics".
+     repetitive chorus, glockenspiel + ukulele, toddler choir, English lyrics,
+     simple vocabulary for toddlers".
    - Struktur per låt: intro (5 s) → vers → refräng → vers → refräng → outro. 2,5–4 min.
-2. **ElevenLabs** om du behöver tydligare svensk barnröst/berättarröst ovanpå,
-   och senare för dubbning till andra språk (fas 6).
+2. **ElevenLabs** om du behöver tydligare engelsk barnröst/berättarröst ovanpå
+   (välj amerikansk accent — störst marknad), och senare för dubbning till
+   andra språk (fas 6).
 3. Batcha: gör 5 låtar per session så du alltid ligger 4–5 veckor före publicering.
 
 **Leverabel:** 5 färdiga låtar (audio) per batch.
@@ -99,14 +119,16 @@ Total extra kostnad utöver det du redan har: **~15–30 USD/mån.**
 **Verktyg: ⭐ vidIQ + ⭐ Canva + YouTube Studio**
 
 1. Titel: generera förslag med vidIQ `generate titles`, kör `title score`,
-   följ formeln: `[Låtnamn] | [Kanalnamn] Barnsånger & Sagor`.
+   följ formeln: `[Song Name] | [Kanalnamn] Nursery Rhymes & Kids Songs`
+   (exakt CoComelons titelstruktur — sökordet först, varumärket sist).
 2. Thumbnail: Canva-mallen (karaktärens ansikte i närbild + scenens färgtema),
    verifiera med vidIQ `thumbnail score` innan publicering.
 3. YouTube Studio:
    - Markera **"Made for Kids"** (lagkrav, COPPA).
-   - Fast publiceringstid: t.ex. **lördag 07:00** (svensk barnfamilje-primetime),
-     schemalägg alltid i förväg.
-   - Lägg varje video i temaspellista: Badtid / Läggdags / Matdags / Alla sånger.
+   - Fast publiceringstid mot USA: t.ex. **lördag 06:00 ET / 12:00 svensk tid**
+     (amerikansk barnfamilje-morgon), schemalägg alltid i förväg.
+   - Lägg varje video i temaspellista på engelska: Bath Time / Bedtime /
+     Meal Time / All Songs.
 4. Var 4:e video = **kompilation** (20–30 min) av tidigare låtar — klipps ihop
    på 1 timme i CapCut, ger oproportionerligt mycket watch time.
 
@@ -136,8 +158,9 @@ Detta är CoComelons egentliga hemlighet — hoppa aldrig över den:
 
 **Verktyg: ElevenLabs (dubb) + ⭐ Higgsfield/Magnific (nya assets)**
 
-1. Dubba topp-10-videorna till engelska/norska/danska med ElevenLabs
-   → systerkanaler per språk (CoComelons exakta modell — marginalkostnad nära noll).
+1. Dubba topp-10-videorna till spanska, portugisiska och hindi med ElevenLabs
+   → systerkanaler per språk (CoComelons exakta modell — marginalkostnad nära
+   noll; dessa tre är de största barnmarknaderna efter engelska).
 2. Långformat: 45–60 min "sov-kompilationer" och "loopar".
 3. Shorts: klipp 30–60 s höjdpunkter ur varje video (vidIQ `generate clips`).
 4. Först därefter: merch, licensiering, andra plattformar.
@@ -162,7 +185,7 @@ Detta är CoComelons egentliga hemlighet — hoppa aldrig över den:
 
 ## Kom-igång-checklista (gör i ordning)
 
-- [ ] Fas 0: kör vidIQ-research → välj nisch + 10 låtar
+- [ ] Fas 0: kör vidIQ-research (engelska sökord) → välj nisch + 10 låtar
 - [ ] Skapa YouTube-kanal + Google-konto för varumärket
 - [ ] Skaffa Suno-konto (~10 USD/mån)
 - [ ] Fas 1: generera huvudkaraktär + stilguide

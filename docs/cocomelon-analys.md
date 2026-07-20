@@ -69,10 +69,16 @@ CoComelon är den enda kreatören med **två videor på YouTubes topp-10 mest vi
 
 ## 3. Blueprint: vår egen version
 
-### Steg 1 – Positionering (välj en av dessa)
-- **Språknisch**: svensk/nordisk version — samma formel, lokala barnvisor ("Imse vimse spindel", "Björnen sover" = public domain + befintlig sökvolym på svenska).
-- **Teman-nisch**: samma formel men med en vinkel CoComelon inte äger (djur, fordon, känslor/NPY-pedagogik).
-- **Karaktärsnisch**: egen unik huvudkaraktär med tydlig silhuett och en visuell "hook" (JJ:s blonda lock-motsvarighet).
+### Steg 1 – Positionering
+**Beslut: innehållet produceras på ENGELSKA** för maximal internationell räckvidd
+(se [verktygsplan.md](./verktygsplan.md)). Det betyder att vi konkurrerar på
+CoComelons hemmaplan — därför måste differentieringen komma från:
+- **Teman-nisch**: en vinkel CoComelon inte äger (specifika djur, fordon, känslor)
+  — identifieras med sökordsdata i fas 0.
+- **Karaktärsnisch**: egen unik huvudkaraktär med tydlig silhuett och en visuell
+  "hook" (JJ:s blonda lock-motsvarighet).
+- Skalning till andra språk (spanska, portugisiska, hindi) sker via dubbning
+  i ett senare skede.
 
 ### Steg 2 – Bygg innehållsbiblioteket
 1. 10 public domain-barnvisor med högst sökvolym på målspråket (nyckelordsresearch först).
